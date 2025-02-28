@@ -1,26 +1,5 @@
-# ember-choices
 
-[Short description of the addon.]
-
-## Compatibility
-
-- Ember.js v4.12 or above
-- Embroider or ember-auto-import v2
-
-## Installation
-
-```
-ember install ember-choices
-```
-
-## Usage
-
-[Longer description of how to use the addon in apps.]
-
-## Contributing
-
-See the [Contributing](CONTRIBUTING.md) guide for details.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE.md).
+# Steps
+1. `npx ember-cli@latest addon ember-choices -b @embroider/addon-blueprint --pnpm --typescript`
+2. add glimmer, tracking, vscode glint config
+3. create Hello component manually

@@ -8,3 +8,8 @@
 // export default interface Registry {
 //   MyComponent: typeof MyComponent
 // }
+import type Hello from './components/hello.gts';
+
+export default interface EmberChoicesRegistry {
+  Hello: typeof Hello;
+}
