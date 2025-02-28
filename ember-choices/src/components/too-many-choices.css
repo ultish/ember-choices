@@ -1,0 +1,72 @@
+
+.is-open .choices__list--dropdown, .is-open .choices__list--dropdown[aria-expanded] {
+  border-color: var(--fallback-bc, oklch(var(--bc)/0.2));
+}
+.is-focused  .custom_choices__inner{
+  box-shadow: none;
+  border-color: var(--fallback-bc, oklch(var(--bc)/0.2));
+  outline-style: solid;
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: var(--fallback-bc, oklch(var(--bc)/0.2));
+}
+.custom_choices__inner {
+  padding: 2px 0.75rem 0px 0.75rem;
+  min-height: 32px;
+  border-radius: var(--rounded-btn, 0.5rem);
+  border-color: var(--fallback-bc, oklch(var(--bc)/0.2));
+  background: inherit;
+}
+.is-open .choices__inner.custom_choices__inner {
+  border-radius: var(--rounded-btn, 0.5rem);
+}
+.choices__list.custom_choices__list.choices__list--dropdown {
+  border-radius: var(--rounded-btn, 0.5rem);
+}
+.choices__input {
+  background-color: inherit;
+  margin-bottom: 0px;
+  padding: 0px;
+}
+.choices__group {
+  background-color: var(--fallback-b1, oklch(var(--b1)));
+}
+
+.custom_choices__list.choices__list--multiple .custom_item {
+  padding: 0px 6px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.choices__item.custom_item:not(.has-no-choices) {
+  background-color: var(--fallback-b3, oklch(var(--b2) / 1));
+  color: var(--fallback-bc, oklch(var(--bc)));
+  border-color: var(--fallback-b3, oklch(var(--b2) / 1));
+}
+.custom_item.has-no-choices {
+  background-color: var(--fallback-b3, oklch(var(--b2) / 1));
+  color: var(--fallback-bc, oklch(var(--bc)));
+  border-color: var(--fallback-b3, oklch(var(--b2) / 1));
+}
+.choices__item.custom_item.choices__item--selectable.is-selected {
+  background-color: var(--fallback-b2, oklch(var(--b2)/0.6 ));
+}
+
+.custom_choices__list.choices__list--multiple .custom_item.choices__item--selectable button {
+  filter: invert(50%) brightness(100%);
+}
+
+
+.input-sm .choices__inner .choices__list .choices__item.choices__item--selectable {
+  line-height: initial;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.choices__item.choices__item--choice.choices__item--selectable {
+  padding-left: 1rem;
+}
+.choices__item.choices__item--choice.choices__item--selectable.is-highlighted {
+  background-color: var(--fallback-a ,oklch(var(--a)/.5));
+  color: var(--fallback-ac, oklch(var(--ac)))
+}
+/* no choices option*/
+

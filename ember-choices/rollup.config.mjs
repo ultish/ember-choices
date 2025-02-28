@@ -1,6 +1,7 @@
 import { babel } from '@rollup/plugin-babel';
 import copy from 'rollup-plugin-copy';
 import { Addon } from '@embroider/addon-dev/rollup';
+import postcss from 'rollup-plugin-postcss';
 
 const addon = new Addon({
   srcDir: 'src',
@@ -37,6 +38,13 @@ export default {
     // package names.
     addon.dependencies(),
 
+    postcss({
+      autoModules: false,
+      modules: {
+        generateScopedName: 'ember-choices__[sha512:hash:base64:5]',
+      },
+    }),
+
     // This babel config should *not* apply presets or compile away ES modules.
     // It exists only to provide development niceties for you, like automatic
     // template colocation.
@@ -60,6 +68,7 @@ export default {
     // addons are allowed to contain imports of .css files, which we want rollup
     // to leave alone and keep in the published output.
     addon.keepAssets(['**/*.css']),
+    // addon.keepAssets([]),
 
     // Remove leftover build artifacts when starting a new build.
     addon.clean(),
