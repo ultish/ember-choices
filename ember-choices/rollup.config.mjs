@@ -1,7 +1,7 @@
 import { babel } from '@rollup/plugin-babel';
 import copy from 'rollup-plugin-copy';
 import { Addon } from '@embroider/addon-dev/rollup';
-import postcss from 'rollup-plugin-postcss';
+// import postcss from 'rollup-plugin-postcss';
 
 const addon = new Addon({
   srcDir: 'src',
@@ -38,12 +38,12 @@ export default {
     // package names.
     addon.dependencies(),
 
-    postcss({
-      autoModules: false,
-      modules: {
-        generateScopedName: 'ember-choices__[sha512:hash:base64:5]',
-      },
-    }),
+    // postcss({
+    //   autoModules: false,
+    //   modules: {
+    //     generateScopedName: 'ember-choices__[sha512:hash:base64:5]',
+    //   },
+    // }),
 
     // This babel config should *not* apply presets or compile away ES modules.
     // It exists only to provide development niceties for you, like automatic
