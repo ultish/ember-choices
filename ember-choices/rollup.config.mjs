@@ -2,6 +2,7 @@ import { babel } from '@rollup/plugin-babel';
 import copy from 'rollup-plugin-copy';
 import { Addon } from '@embroider/addon-dev/rollup';
 // import postcss from 'rollup-plugin-postcss';
+// import postcssImport from 'postcss-import';
 
 const addon = new Addon({
   srcDir: 'src',
@@ -44,6 +45,15 @@ export default {
     //     generateScopedName: 'ember-choices__[sha512:hash:base64:5]',
     //   },
     // }),
+    // postcss({
+    //   // Process CSS files with imports
+    //   // include: '**/*.css', // Process all CSS files
+    //   extract: 'styles/styles.css', // Output to this file in dist
+    //   inject: false, // Prevent Rollup from injecting; let Embroider handle it
+    //   minimize: false, // Keep readable for debugging (optional: set true for production)
+    //   modules: false, // No CSS modules needed here
+    //   plugins: [postcssImport()], // Process @import statements
+    // }),
 
     // This babel config should *not* apply presets or compile away ES modules.
     // It exists only to provide development niceties for you, like automatic
@@ -69,6 +79,7 @@ export default {
     // to leave alone and keep in the published output.
     addon.keepAssets(['**/*.css']),
     // addon.keepAssets([]),
+    // addon.keepAssets(['dist/components/*.css']),
 
     // Remove leftover build artifacts when starting a new build.
     addon.clean(),
