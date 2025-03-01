@@ -1,7 +1,6 @@
 import Route from 'ember-route-template';
 import Component from '@glimmer/component';
 
-// import Hello from 'ember-choices/components/hello';
 import TooManyChoices from 'ember-choices/components/too-many-choices';
 
 class MyRouteComponent extends Component {

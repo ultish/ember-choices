@@ -1,3 +1,4 @@
+@import "choices.js/public/assets/styles/choices.css";
 
 .is-open .choices__list--dropdown, .is-open .choices__list--dropdown[aria-expanded] {
   border-color: var(--fallback-bc, oklch(var(--bc)/0.2));

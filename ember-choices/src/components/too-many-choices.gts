@@ -3,10 +3,10 @@ import Choices, { type EventChoice, type InputChoice } from 'choices.js';
 import { modifier } from 'ember-modifier';
 import { runTask } from 'ember-lifeline';
 
+// it even works for things that are in the node_modules
+// import 'choices.js/public/assets/styles/choices.css';
 // embroider is based on "pull" mechanics you must import things you need. you can just import css like this and embroider will package it for you. as long as your rollup.config.mjs defines addon.keepAssets()
 import './too-many-choices.css';
-// it even works for things that are in the node_modules
-import 'choices.js/public/assets/styles/choices.css';
 
 interface X {
   group?: string | undefined | null;
