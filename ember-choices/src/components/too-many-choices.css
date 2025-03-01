@@ -1,4 +1,4 @@
-@import "choices.js/public/assets/styles/choices.css";
+@import "choices.js/public/assets/styles/choices.min.css";
 
 .is-open .choices__list--dropdown, .is-open .choices__list--dropdown[aria-expanded] {
   border-color: var(--fallback-bc, oklch(var(--bc)/0.2));
@@ -51,7 +51,7 @@
 }
 .choices__item.custom_item.choices__item--selectable.is-selected {
   /* background-color: var(--fallback-b2, oklch(var(--b2)/0.6 )); */
-  background-color: var(--color-base-200);
+  background-color: color-mix(in oklab, var(--color-base-200) 60%, transparent);
 }
 
 .custom_choices__list.choices__list--multiple .custom_item.choices__item--selectable button {
@@ -70,6 +70,6 @@
 .choices__item.choices__item--choice.choices__item--selectable.is-highlighted {
   /* background-color: var(--fallback-a ,oklch(var(--a)/.5)); */
   background-color: var(--color-accent);
-  color: var(--fallback-ac, oklch(var(--ac)))
+  color: var(--color-accent-content)
 }
 

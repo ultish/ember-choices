@@ -1,6 +1,6 @@
 {
   "name": "ember-choices",
-  "version": "0.0.16",
+  "version": "0.0.17",
   "description": "The default blueprint for Embroider v2 addons.",
   "keywords": [
     "ember-addon"
