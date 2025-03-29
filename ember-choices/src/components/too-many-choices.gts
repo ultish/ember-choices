@@ -140,6 +140,7 @@ export default class TooManyChoices<T extends X> extends Component<
 
   <template>
     <style></style>
+    {{! @glint-expect-error }}
     <PhHeart />
 
     <select
