@@ -9,12 +9,14 @@ import { runTask } from 'ember-lifeline';
 // import '../styles/too-many-choices.css';
 import './too-many-choices.css';
 
+import PhHeart from 'ember-phosphor-icons/components/ph-heart';
+
 interface X {
   group?: string | undefined | null;
 }
 
 interface Choice<T> {
-  chargeCode: T;
+  choice: T;
   selected: boolean;
 }
 
@@ -116,9 +118,9 @@ export default class TooManyChoices<T extends X> extends Component<
   get choices() {
     const groups = this.args.choices.reduce(
       (acc, c) => {
-        const { chargeCode } = c;
+        const { choice } = c;
         // Check if group already exists
-        const group = chargeCode.group ?? 'Ungrouped';
+        const group = choice.group ?? 'Ungrouped';
         if (!acc[group]) {
           acc[group] = { name: group, choices: [] };
         }
@@ -138,6 +140,7 @@ export default class TooManyChoices<T extends X> extends Component<
 
   <template>
     <style></style>
+    <PhHeart />
 
     <select
       {{this.makeChoices}}

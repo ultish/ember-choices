@@ -3,6 +3,8 @@ import Component from '@glimmer/component';
 
 import TooManyChoices from 'ember-choices/components/too-many-choices';
 
+import PhHeart from 'ember-phosphor-icons/components/ph-heart';
+
 class MyRouteComponent extends Component {
   get choices() {
     return [
@@ -19,6 +21,8 @@ class MyRouteComponent extends Component {
     <h2 id="title">Welcome to Ember</h2>
 
     {{outlet}}
+
+    <PhHeart />
 
     <TooManyChoices @choices={{this.choices}} as |cc|>
       <option selected={{if cc.selected "selected"}} value={{cc.chargeCode.id}}>

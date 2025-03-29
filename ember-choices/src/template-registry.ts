@@ -9,8 +9,8 @@
 //   MyComponent: typeof MyComponent
 // }
 
-import type TooManyChoices from './components/too-many-choices';
+// import type TooManyChoices from './components/too-many-choices';
 
-export default interface EmberChoicesRegistry {
-  TooManyChoices: typeof TooManyChoices;
-}
+// export default interface EmberChoicesRegistry {
+//   TooManyChoices: typeof TooManyChoices;
+// }

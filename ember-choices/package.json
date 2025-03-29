@@ -1,6 +1,6 @@
 {
   "name": "ember-choices",
-  "version": "0.0.17",
+  "version": "0.0.19",
   "description": "The default blueprint for Embroider v2 addons.",
   "keywords": [
     "ember-addon"
@@ -51,7 +51,8 @@
     "choices.js": "^11.0.6",
     "decorator-transforms": "^2.2.2",
     "ember-lifeline": "^7.0.0",
-    "ember-modifier": "^4.2.0"
+    "ember-modifier": "^4.2.0",
+    "ember-phosphor-icons": "^0.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
